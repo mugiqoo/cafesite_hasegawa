@@ -48,6 +48,9 @@ img {
     vertical-align: bottom;
     border: none;
 }
+body{
+    background-color: #E8D9BF;
+}
 
 /* ヘッダー */
 
@@ -96,9 +99,8 @@ img {
 }
 
 .container{
-    background-color: #E8D9BF;
     text-align: center;
-    max-width: 1920px;
+    margin: 0 auto;
 }
 
 /* ;hope */
@@ -132,14 +134,28 @@ img {
     max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 94px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cafelatte{
+    padding-right: 7.9%;
+    width: 50%;
 }
 
 .cafelatte img{
-    margin-right: 80.5px;
     width: 500px;
     height: 560px;
     object-fit:cover;
     border-radius:0 0 80px 0;
+}
+
+.aboutus-text{
+    margin-top: 55px;
+}
+
+.aboutus-text h3{
+    text-align: left;
 }
 
 .aboutus h4{
@@ -153,17 +169,11 @@ img {
 
 .aboutus p{
     font-size: 16px;
+    font-weight: normal;
     line-height: 1.62;
-    width: 410px;
+    width: 411px;
     text-align: left;
-}
-
-.aboutus-text{
-    margin-top: 55px;
-}
-
-.aboutus-text h3{
-    margin-left: 0;
+    padding-left: 10px;
 }
 
 /* MENU */
@@ -172,45 +182,38 @@ img {
     margin: 0 auto;
 }
 
-.logo img{
-    height: 81px;
-}
+.category img{height: 81px;}
 
-.logo{
-    margin: 0 auto;
-}
+.h3{margin: 0 auto;}
 
 dl{
     display: flex;
     justify-content: space-between;
     margin-top:39px ;
-    margin-bottom: 85px;    
+    margin-bottom: 85px;  
+    padding-left: 10px;
+    padding-right: 10px;  
 }
 
-dt img{
-    width:300px ;
-    height: 200px;
-    object-fit:cover;
-    border-radius:0 80px 0 0;
-}
+dl div{width: 30%;}
+
+dt img{border-radius:0 80px 0 0;}
 
 dt p{
     color: #D30202;
     font-size: 38px;
-    font-weight: bold;
+    font-weight: normal;
     margin-top: -20px;
-    margin-left: -96px;
+    text-align: left;
+    padding-left: 14px;
 }
 
 dd{
     font-size: 17px;
     line-height: 1.47;
-    width:300px ;
     text-align: left;
     margin-top: 7px;
-
 }
-
 
 /* GALLERY */
 .gallery{
@@ -229,6 +232,13 @@ dd{
 }
 
 /* EVENT */
+.event{
+    max-width: 1000px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+
 .box{
     background-color: #FFF;
     border: solid #4f260b 3.7px;
@@ -238,6 +248,13 @@ dd{
     align-items: center;
     margin-top: 30px;
     margin-bottom: 68px;
+    position: relative;
+}
+
+article{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%)
 }
 
 .wrap p{
@@ -249,37 +266,61 @@ dd{
 
 .eventdate{
     text-align: left;
-    
 }
+
 .eventtext{
     text-decoration: underline;
     margin-left: 47px;
 }
 
 /* ACCESS */
-.access{
-    margin-bottom: 0;
-    max-width: 1920px;
-    margin: 0 auto;
-}
-.map{
-    max-width: 1920px;
-}
-.map iframe{
-    margin-top: 45px;
+iframe{
     width: 100%;
-    height: 25%;
-
+    margin-top: 45px;
+    height: 471px;
 }
 
 /* フッター */
-.footer-wrap{
-    max-width: 1000px;
-    height: 393px;
+footer{
     background-color: #FFF;
+    margin: 0 auto;
+    text-align: center;
+    height: 393px;
 }
 
-.footer p{
-    font-size: 20px;
+footer div{
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 82px;
+}
 
+address p {
+    font-style: normal;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.95;
+    text-align: left;
+    margin-bottom: 73px;
+}
+
+address{
+    width: 347px;
+    padding-left: 6.8%;
+}
+
+small{
+    font-size: 16px;
+    line-height: 2.18;
+}
+
+/* トップへボタン */
+button{
+    position:fixed;
+    bottom: 16%;
+    right: 16%;
+}
+
+button img{
+    width: 125px;
 }
