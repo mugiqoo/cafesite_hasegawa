@@ -38,6 +38,7 @@ a:hover {
     opacity: 0.7;
 }
 
+
 ul {
     /*左の「・」を消す*/
     list-style: none;
@@ -103,7 +104,7 @@ body{
     margin: 0 auto;
 }
 
-/* ;hope */
+/* hope */
 .en{
     font-size: 28px;
     letter-spacing: -0.002em;
@@ -143,20 +144,14 @@ body{
     width: 50%;
 }
 
-.cafelatte img{
-    width: 500px;
-    height: 560px;
-    object-fit:cover;
-    border-radius:0 0 80px 0;
-}
+.cafelatte img{border-radius:0 0 80px 0;}
 
 .aboutus-text{
-    margin-top: 55px;
+    padding-top: 55px;
+    width: 42%;
 }
 
-.aboutus-text h3{
-    text-align: left;
-}
+.aboutus-text h3{text-align: left;}
 
 .aboutus h4{
     font-size: 44px;
@@ -171,7 +166,6 @@ body{
     font-size: 16px;
     font-weight: normal;
     line-height: 1.62;
-    width: 411px;
     text-align: left;
     padding-left: 10px;
 }
@@ -243,24 +237,16 @@ dd{
     background-color: #FFF;
     border: solid #4f260b 3.7px;
     max-width: 1000px;
-    height: 200px;
     margin: 0 auto;
     align-items: center;
     margin-top: 30px;
     margin-bottom: 68px;
-    position: relative;
+    padding: 40px 158px 18px 158px;
 }
 
-article{
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%)
-}
-
-.wrap p{
+.box p{
     font-size: 23px;
     margin-bottom: 22px;   
-    margin-left: 158px;
     text-align: left;
 }
 
@@ -285,14 +271,14 @@ footer{
     background-color: #FFF;
     margin: 0 auto;
     text-align: center;
-    height: 393px;
+    padding-bottom: 74px;
+    padding-top: 74px;
 }
 
 footer div{
     max-width: 1000px;
     display: flex;
     margin: 0 auto;
-    padding-top: 82px;
 }
 
 address p {
@@ -301,7 +287,7 @@ address p {
     font-weight: normal;
     line-height: 1.95;
     text-align: left;
-    margin-bottom: 73px;
+    padding-bottom: 74px;
 }
 
 address{
@@ -309,18 +295,18 @@ address{
     padding-left: 6.8%;
 }
 
-small{
-    font-size: 16px;
-    line-height: 2.18;
-}
+small{font-size: 16px;}
 
 /* トップへボタン */
 button{
     position:fixed;
-    bottom: 16%;
-    right: 16%;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
 }
 
 button img{
     width: 125px;
 }
+
