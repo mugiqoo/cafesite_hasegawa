@@ -99,12 +99,13 @@ body{
     width: 100%;
 }
 
-.container{
-    text-align: center;
-    margin: 0 auto;
-}
+.container{margin: 0 auto;}
 
 /* hope */
+.hope{
+    text-align: center;
+}
+
 .en{
     font-size: 28px;
     letter-spacing: -0.002em;
@@ -129,7 +130,11 @@ body{
     padding-bottom: 93.5px;
 }
 
-/* aboutus */
+/* Aboutus */
+.sp_category{
+    display: none;
+}
+
 .aboutus{
     display: flex;
     max-width: 1000px;
@@ -151,26 +156,27 @@ body{
     width: 42%;
 }
 
-.aboutus-text h3{text-align: left;}
-
 .aboutus h4{
     font-size: 44px;
     line-height: 1.38;
     font-weight: normal;
     margin: 41.5px 0px 25.5px 0px;
-    width: 353px;
-    text-align: left;
 }
+
+.aboutus h3{text-align: left;}
 
 .aboutus p{
     font-size: 16px;
     font-weight: normal;
     line-height: 1.62;
-    text-align: left;
     padding-left: 10px;
 }
 
 /* MENU */
+h3{
+    text-align: center;
+}
+
 .menu{
     max-width: 1000px;  
     margin: 0 auto;
@@ -198,14 +204,12 @@ dt p{
     font-size: 38px;
     font-weight: normal;
     margin-top: -20px;
-    text-align: left;
-    padding-left: 14px;
+   padding-left: 14px;
 }
 
 dd{
     font-size: 17px;
     line-height: 1.47;
-    text-align: left;
     margin-top: 7px;
 }
 
@@ -213,11 +217,15 @@ dd{
 .gallery{
     width: 100%;
 }
-.gallery-photo{
+
+.gallery-photo{ 
     display: flex;
-    flex-wrap: nowrap;  
+    flex-wrap: nowrap; 
     margin-top: 16px;
     margin-bottom: 59px;
+}
+.sp_gallary{
+    display: none;
 }
 .gallery-photo img{
     width: 20%;
@@ -241,17 +249,12 @@ dd{
     align-items: center;
     margin-top: 30px;
     margin-bottom: 68px;
-    padding: 40px 158px 18px 158px;
+    padding: 40px 0px 18px 158px;
 }
 
 .box p{
     font-size: 23px;
     margin-bottom: 22px;   
-    text-align: left;
-}
-
-.eventdate{
-    text-align: left;
 }
 
 .eventtext{
@@ -298,7 +301,7 @@ address{
 small{font-size: 16px;}
 
 /* トップへボタン */
-button{
+.btn {
     position:fixed;
     bottom: 20px;
     right: 20px;
@@ -306,7 +309,279 @@ button{
     border: none;
 }
 
-button img{
-    width: 125px;
+.btn img{width: 125px;}
+
+
+
+.hamburger,
+.sp-nav{
+    display: none;
 }
 
+/* レスポンシブ対応*/
+
+@media screen and (max-width: 1100px){
+    .pc-nav{
+        display: none;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        top:20px;
+        right:20px;
+        height: 33px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    .hamburger span{
+        background: #FFF;
+        display:block;
+        width: 33px;
+        height: 3px;
+        position: relative;
+        top:10px;
+        transition: 0.3s;
+    }
+
+    .hamburger span::before,
+    .hamburger span::after {
+        content: '';
+        background: #FFF;
+        display:block;
+        width: 33px;
+        height: 3px;
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .hamburger span::before{
+        bottom: 10px;
+        
+    }
+    .hamburger span::after{
+        top: 10px;
+    }
+
+    .open span{
+       background: transparent;
+    }
+
+    .open span::before{
+        bottom: 0px;
+        transform: rotate(45deg);
+    }
+
+    .open span::after{
+        top: 0px;
+        transform: rotate(135deg);
+    }
+
+    .sp-nav{
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0,0,0,0.8);
+    }
+
+    .sp-nav ul{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sp-nav ul li{
+        text-align: center;
+        color: #FFF;
+        font-size: 18px;
+        font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+        "ＭＳ 明朝", serif;
+        padding: 15px 0;
+    }
+
+
+}
+@media screen and (min-width: 767px){
+    .br-sp {display: none; }
+    }    
+@media screen and (max-width: 767px){
+    .en{
+        font-size: 17px;
+        padding-top: 41px;
+        padding-bottom: 25px;
+    }
+
+    .ja{
+        font-size: 38px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+    }
+    .hope p{
+        font-size: 16px;
+        line-height: 1.87;
+        letter-spacing: 0.1em;
+        padding-top: 13px;
+        padding-bottom: 54px;
+
+    }
+
+    /* モバイルaboutus */
+    .sp_category{
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 12px;
+    }
+    
+    .pc_category{
+        display: none;
+    }
+    .cafelatte{
+        width: 100%;
+        padding-right: 0px;
+    }
+    
+    .cafelatte img{
+        border-radius:0 0 0 0;
+        width: 100%;
+    }
+    
+    .aboutus{
+        display: block;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 44px;
+    }
+
+    .aboutus h4{
+        font-size: 36px;
+        line-height: 1.25;
+        margin-top: 32px;
+        margin-bottom: 23px;
+
+    } 
+    .aboutus-text{
+        width: 100%;
+        text-align: left;
+        padding-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+    
+    .aboutus h3{text-align:center;}
+    
+    .aboutus p{
+        font-size: 16px;
+        width: 100%;
+        padding-left: 0px;
+        line-height: 1.75;  
+    }
+    
+    /* モバイルmenu */
+
+    .category img{height: 45px;}
+
+    dl{ 
+        display: block;
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-top:17px ;
+    }
+
+    dl div{width: 100%;}
+    dt img{width: 100%;}
+    dt p{
+        font-size: 40px;
+        margin-top: -15px;
+        padding-left: 10px;
+    }
+
+    dd{
+        font-size: 17px;
+        line-height: 1.59;
+        margin-top: 12px;
+        margin-bottom: 55px;
+
+    }
+    
+    
+    /* モバイルgallery */
+
+    .sp_gallary{
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 27px;
+    }
+
+    .pc_gallary{display: none;}
+
+    .gallery-photo{ 
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    /* モバイルevent */
+    .event{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .box p{
+        font-size: 16px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    
+    .box{
+        margin: 15px 0 26px 0;
+        padding: 22px 30px 0 30px;
+    }
+
+    .eventtext{
+        margin-left: 0px;
+    }
+
+    /* モバイルaccess */
+
+    iframe{
+        width: 100%;
+        margin-top: 5px;
+        height: 191px;
+    }
+    
+    /* モバイルfooter */   
+    
+    footer{
+        padding: 40px 20px 27px 20px; 
+    }
+
+    footer div{
+    display: block;
+   }
+
+    address p {
+        font-size: 12px;
+        line-height: 1.75;
+        padding-top: 25px;
+        padding-bottom: 38px;
+    }
+
+    address{
+        width: auto;
+        padding-left:0;
+    }
+
+    /* モバイルトップへボタン */
+    .btn {
+        bottom: 12px;
+        right: 12px;
+    }
+    
+    .btn img{width: 100px;}
+}
